@@ -4,6 +4,7 @@
 
 ## ほしいやつ (最低限)
 - [x] Vector (配列外参照するとdieしてほしい)
-- [ ] Set
+- [x] UnorderedSet
+- [x] UnorderedMap
 - [ ] PriorityQueue
 - [ ] UnionFind
