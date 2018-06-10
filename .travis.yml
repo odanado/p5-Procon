@@ -3,6 +3,7 @@ perl:
     - "5.18"
 
 install:
+    - cpanm Carton
     - carton
 
 script:
