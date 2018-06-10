@@ -7,4 +7,4 @@
 - [x] UnorderedSet
 - [x] UnorderedMap
 - [ ] PriorityQueue
-- [ ] UnionFind
+- [x] UnionFind
