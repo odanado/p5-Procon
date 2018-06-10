@@ -1,0 +1,12 @@
+language: perl
+perl:
+    - "5.18"
+
+install:
+    - carton
+
+script:
+    - carton exec -- prove -Ilib
+
+notifications:
+    email: false
