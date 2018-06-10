@@ -6,9 +6,18 @@ use v5.18;
 package Vector {
     sub new {
         my $class = shift;
+        my ($size, $value) = @_;
+
+        my $data;
+        if (defined $size) {
+            $data = [ map { $value } 1..$size ];
+        }
+        else {
+            $data = [];
+        }
 
         my $self = bless {
-            _data => []
+            _data => $data
         }, $class;
         return $self;
     }

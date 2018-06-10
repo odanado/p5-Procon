@@ -7,6 +7,15 @@ use Test::Exception;
 
 use Vector;
 
+subtest 'new のテスト' => sub {
+    my $vector = Vector->new(10);
+    ok(not defined $vector->at(0));
+
+    $vector = Vector->new(10, 'poyo');
+    ok(defined $vector->at(0));
+    ok($vector->at(0) eq 'poyo');
+};
+
 my $vector = Vector->new();
 $vector->push_back($_) for (1..10);
 
