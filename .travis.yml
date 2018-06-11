@@ -5,12 +5,13 @@ perl:
 install:
     - cpanm Carton
     - carton
+    - carton --version
 
 script:
     - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/" carton exec -- prove -lrv t
 
 after_success:
-    - carton exec -- cover -test -report coveralls
+    - carton exec -- cover -report coveralls
 
 notifications:
     email: false
