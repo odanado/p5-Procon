@@ -13,7 +13,7 @@ script:
     - carton exec -- prove -lrv t
 
 after_success:
-    - carton exec -- cover -report coveralls
+    - carton exec -- cover -test -report coveralls
 
 notifications:
     email: false
