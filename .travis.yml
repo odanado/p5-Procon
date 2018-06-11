@@ -2,15 +2,12 @@ language: perl
 perl:
     - "5.18"
 
-env:
-    - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/"
-
 install:
     - cpanm Carton
     - carton
 
 script:
-    - carton exec -- prove -lrv t
+    - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/" carton exec -- prove -lrv t
 
 after_success:
     - carton exec -- cover -test -report coveralls
