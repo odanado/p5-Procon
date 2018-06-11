@@ -10,6 +10,7 @@ package Vector {
 
         my $data;
         if (defined $size) {
+            $value = 0 unless defined $value;
             $data = [ map { $value } 1..$size ];
         }
         else {
