@@ -3,7 +3,7 @@ perl:
     - "5.18"
 
 env:
-    - HARNESS_PERL_SWITCHES=-MDevel::Cover=+ignore,^local/|^t/
+    - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^local/|^t/"
 
 install:
     - cpanm Carton
