@@ -10,5 +10,5 @@
 - [ ] Deque
 - [ ] Stack
 - [ ] Queue
-- [ ] PriorityQueue
+- [x] PriorityQueue
 - [x] UnionFind
