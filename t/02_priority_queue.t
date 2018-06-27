@@ -28,18 +28,18 @@ subtest "numeric" => sub {
 
 subtest "string" => sub {
     my $que = PriorityQueue->new( sub { $_[0] gt $_[1] } );
-    $que->push($_) for ('a', 'b', 'z', 'd');
+    $que->push($_) for ( 'a', 'b', 'z', 'd' );
 
-    ok( $que->front == 'z' );
-
-    $que->pop;
-    ok( $que->front == 'd' );
+    ok( $que->front eq 'z' );
 
     $que->pop;
-    ok( $que->front == 'b' );
+    ok( $que->front eq 'd' );
 
     $que->pop;
-    ok( $que->front == 'a' );
+    ok( $que->front eq 'b' );
+
+    $que->pop;
+    ok( $que->front eq 'a' );
 };
 
 done_testing;
