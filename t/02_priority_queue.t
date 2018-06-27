@@ -9,9 +9,15 @@ use PriorityQueue;
 
 subtest "numeric" => sub {
     my $que = PriorityQueue->new;
-    $que->push($_) for ( 1, 2, 10, 7, 5 );
+    $que->push($_) for ( 7, 1, 2, 10, 7, 5, 7 );
 
     ok( $que->front == 10 );
+
+    $que->pop;
+    ok( $que->front == 7 );
+
+    $que->pop;
+    ok( $que->front == 7 );
 
     $que->pop;
     ok( $que->front == 7 );

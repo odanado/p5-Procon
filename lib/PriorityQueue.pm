@@ -59,15 +59,14 @@ package PriorityQueue {
 
         my $i = 0;
         while ( $i < $data->size ) {
+            $self->_comp_and_swap( 2 * $i + 2, 2 * $i + 1 );
             if ( $self->_comp_and_swap( 2 * $i + 1, $i ) ) {
                 $i = 2 * $i + 1;
                 next;
             }
-            if ( $self->_comp_and_swap( 2 * $i + 2, $i ) ) {
-                $i = 2 * $i + 2;
-                next;
+            else {
+                last;
             }
-            last;
         }
     }
 
